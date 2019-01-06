@@ -16,6 +16,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@justa/mask-directive": [
+        "dist/justa/mask-directive"
+      ],
+      "@justa/mask-directive/*": [
+        "dist/justa/mask-directive/*"
+      ]
+    }
   }
 }

@@ -133,6 +133,41 @@
           }
         }
       }
+    },
+    "@justa/mask-directive": {
+      "root": "projects/justa/mask-directive",
+      "sourceRoot": "projects/justa/mask-directive/src",
+      "projectType": "library",
+      "prefix": "jst",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/justa/mask-directive/tsconfig.lib.json",
+            "project": "projects/justa/mask-directive/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/justa/mask-directive/src/test.ts",
+            "tsConfig": "projects/justa/mask-directive/tsconfig.spec.json",
+            "karmaConfig": "projects/justa/mask-directive/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/justa/mask-directive/tsconfig.lib.json",
+              "projects/justa/mask-directive/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "jst-library"
