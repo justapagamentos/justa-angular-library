@@ -8,7 +8,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "build:pkg": " ng build @justa/mask-directive"
+    "build:pkg": " ng build @justa/mask-directive",
+    "dev:lib": "ng build @justa/mask-directive --watch"
   },
   "private": true,
   "dependencies": {
