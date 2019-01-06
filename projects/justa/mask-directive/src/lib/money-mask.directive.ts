@@ -1,5 +1,4 @@
 import { Directive, Input, OnInit, ElementRef, OnChanges, SimpleChanges } from '@angular/core';
-import { NgControl } from '@angular/forms';
 import InputMask from 'inputmask';
 
 @Directive({
@@ -20,10 +19,9 @@ export class MoneyMaskDirective implements OnInit, OnChanges {
     placeholder: '0,00',
   };
 
-  constructor(private elementRef: ElementRef, public ngControl: NgControl) {
+  constructor(private elementRef: ElementRef) {
     // Attach the local variable to the element in the DOM
     this.el = this.elementRef.nativeElement;
-    console.log('element: ', this.el);
   }
 
   ngOnInit() {
@@ -43,9 +41,4 @@ export class MoneyMaskDirective implements OnInit, OnChanges {
   }
 
   ngOnChanges(changes: SimpleChanges) {}
-
-  onInputChange(event: any) {
-    const newVal = event.replace(/\D/gi, '');
-    this.ngControl.valueAccessor.writeValue(newVal);
-  }
 }
