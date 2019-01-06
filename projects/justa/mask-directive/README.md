@@ -10,7 +10,7 @@ npm install --save @justa/mask-directive
 
 ## Usage
 
-Add the `MaskDirectiveModule` in your `app.module.ts` file in the _imports_ array.
+Add the `MoneyMaskDirective` in your `app.module.ts` file in the _declarations_ array.
 
 Add the `jstMoneyMask` Directive to your input.
 
