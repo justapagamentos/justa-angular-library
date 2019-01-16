@@ -20,3 +20,4 @@ Add the `jstMoneyMask` Directive to your input.
 |-------|------|---------|
 | hasDecimal | bool | true |
 | hasPrefix | bool | false |
+| prefixSymbol | string | R$ |
