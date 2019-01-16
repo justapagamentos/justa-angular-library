@@ -1,44 +1,81 @@
-import { Directive, Input, OnInit, ElementRef, OnChanges, SimpleChanges } from '@angular/core';
+import {
+  Directive,
+  Input,
+  OnInit,
+  ElementRef,
+  HostListener,
+  forwardRef,
+  Injector,
+} from '@angular/core';
+import { NG_VALUE_ACCESSOR, NgControl } from '@angular/forms';
 import InputMask from 'inputmask';
 
 @Directive({
   selector: '[jstMoneyMask]',
+  providers: [
+    {
+      provide: NG_VALUE_ACCESSOR,
+      useExisting: forwardRef(() => MoneyMaskDirective),
+      multi: true,
+    },
+  ],
 })
-export class MoneyMaskDirective implements OnInit, OnChanges {
+export class MoneyMaskDirective implements OnInit {
   private im: any; // Inputmask ref
   private el: HTMLInputElement; // Ref to the element in the DOM
-  @Input() hasDecimal: boolean = true; // Input to set decimals to inputmask obj
+  private control: NgControl;
+  @Input() hasDecimal: boolean = false; // Input to set decimals to inputmask obj
   @Input() hasPrefix: boolean = false; // Prefix to insert to the inputmask obj
+  @Input() prefixSymbol: string = 'R$ '; // prefix symbol to the inputmask
 
   private imObject = {
-    alias: 'decimal',
+    alias: 'currency',
     autoGroup: true,
     groupSeparator: '.',
     radixPoint: ',',
     rightAlign: false,
-    placeholder: '0,00',
+    prefix: 'R$ ',
   };
 
-  constructor(private elementRef: ElementRef) {
+  private get nativeElement() {
+    return this.elementRef.nativeElement;
+  }
+
+  constructor(private elementRef: ElementRef, private injector: Injector) {
     // Attach the local variable to the element in the DOM
     this.el = this.elementRef.nativeElement;
   }
 
   ngOnInit() {
-    let newInObject;
-    if (this.hasPrefix) {
-      newInObject = { ...this.imObject, prefix: 'R$ ', placeholder: 'R$ 0,00' };
-    } else {
-      newInObject = this.imObject;
+    this.control = this.injector.get(NgControl);
+    // verify if has prefix. Eg.: R$
+    if (this.hasPrefix && this.prefixSymbol) {
+      this.imObject['prefix'] = this.prefixSymbol;
     }
-    if (this.hasPrefix) {
-      newInObject = { ...this.imObject, numericInput: true };
-    } else {
-      newInObject = this.imObject;
+    // Verify if has decimal numbers
+    if (this.hasDecimal) {
+      this.imObject['numericInput'] = true;
     }
-    this.im = new InputMask(newInObject);
+    this.im = new InputMask(this.imObject);
     this.im.mask(this.el);
   }
 
-  ngOnChanges(changes: SimpleChanges) {}
+  @HostListener('ngModelChange', ['$event'])
+  onModelChange(event) {
+    this.onInputChange(event);
+  }
+
+  onInputChange(event: any) {
+    const eventValue = event;
+    const newVal =
+      typeof event === 'string' && (eventValue.includes('R$') || eventValue.includes('.'))
+        ? eventValue.replace(/\D/gi, '')
+        : eventValue;
+
+    this.control.valueAccessor.writeValue = newVal;
+  }
+
+  getCursorPosition(): number {
+    return this.nativeElement.selectionStart;
+  }
 }
