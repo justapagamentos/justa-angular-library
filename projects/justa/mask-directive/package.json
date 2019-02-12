@@ -1,6 +1,6 @@
 {
   "name": "@justa/mask-directive",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "keywords": ["angular-directives", "angular", "ng directives", "input mask"],
   "author": {"name": "Raí Siqueira", "email": "rai.siqueira@justa.com.vc"},
   "license": "MIT",
