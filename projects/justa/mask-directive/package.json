@@ -1,10 +1,13 @@
 {
   "name": "@justa/mask-directive",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "peerDependencies": {
     "@angular/common": "^7.0.0",
     "@angular/core": "^7.0.0",
     "@angular/forms": "^7.0.0",
-    "inputmask": "^4.0.5"
+    "inputmask": "^4.0.6"
+  },
+  "devDependencies": {
+    "inputmask": "^4.0.6"
   }
 }
