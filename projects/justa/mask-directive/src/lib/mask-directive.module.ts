@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
-import { MaskDirectiveComponent } from './mask-directive.component';
 import { MoneyMaskDirective } from './money-mask.directive';
 
+const MASK_DIRECTIVES = [MoneyMaskDirective];
+
 @NgModule({
-  declarations: [MaskDirectiveComponent, MoneyMaskDirective],
-  imports: [
-  ],
-  exports: [MaskDirectiveComponent]
+  declarations: [MASK_DIRECTIVES],
+  imports: [],
+  exports: [MASK_DIRECTIVES],
 })
-export class MaskDirectiveModule { }
+export class MaskDirectiveModule {}

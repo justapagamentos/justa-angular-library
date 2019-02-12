@@ -1,29 +1,12 @@
-import {
-  Directive,
-  Input,
-  OnInit,
-  ElementRef,
-  HostListener,
-  forwardRef,
-  Injector,
-} from '@angular/core';
-import { NG_VALUE_ACCESSOR, NgControl } from '@angular/forms';
+import { Directive, Input, OnInit, ElementRef, HostListener } from '@angular/core';
 import InputMask from 'inputmask';
 
 @Directive({
   selector: '[jstMoneyMask]',
-  providers: [
-    {
-      provide: NG_VALUE_ACCESSOR,
-      useExisting: forwardRef(() => MoneyMaskDirective),
-      multi: true,
-    },
-  ],
 })
 export class MoneyMaskDirective implements OnInit {
   private im: any; // Inputmask ref
   private el: HTMLInputElement; // Ref to the element in the DOM
-  private control: NgControl;
   @Input() hasDecimal: boolean = false; // Input to set decimals to inputmask obj
   @Input() hasPrefix: boolean = false; // Prefix to insert to the inputmask obj
   @Input() prefixSymbol: string = 'R$ '; // prefix symbol to the inputmask
@@ -37,17 +20,12 @@ export class MoneyMaskDirective implements OnInit {
     prefix: 'R$ ',
   };
 
-  private get nativeElement() {
-    return this.elementRef.nativeElement;
-  }
-
-  constructor(private elementRef: ElementRef, private injector: Injector) {
+  constructor(private elementRef: ElementRef) {
     // Attach the local variable to the element in the DOM
     this.el = this.elementRef.nativeElement;
   }
 
   ngOnInit() {
-    this.control = this.injector.get(NgControl);
     // verify if has prefix. Eg.: R$
     if (this.hasPrefix && this.prefixSymbol) {
       this.imObject['prefix'] = this.prefixSymbol;
@@ -60,9 +38,22 @@ export class MoneyMaskDirective implements OnInit {
     this.im.mask(this.el);
   }
 
-  @HostListener('ngModelChange', ['$event'])
-  onModelChange(event) {
-    this.onInputChange(event);
+  @HostListener('keypress', ['$event'])
+  onKeyPress(event) {
+    console.log(event);
+    if (!this.restrictNumeric(event)) {
+      event.preventDefault;
+    }
+  }
+
+  @HostListener('paste', ['$event']) onPaste(e) {
+    this.onInputChange(e);
+  }
+  @HostListener('change', ['$event']) onChange(e) {
+    this.onInputChange(e);
+  }
+  @HostListener('input', ['$event']) onInput(e) {
+    this.onInputChange(e);
   }
 
   onInputChange(event: any) {
@@ -71,11 +62,23 @@ export class MoneyMaskDirective implements OnInit {
       typeof event === 'string' && (eventValue.includes('R$') || eventValue.includes('.'))
         ? eventValue.replace(/\D/gi, '')
         : eventValue;
-
-    this.control.valueAccessor.writeValue = newVal;
   }
 
-  getCursorPosition(): number {
-    return this.nativeElement.selectionStart;
+  restrictNumeric(e): boolean {
+    let input;
+    if (e.metaKey || e.ctrlKey) {
+      return true;
+    }
+    if (e.which === 32) {
+      return false;
+    }
+    if (e.which === 0) {
+      return true;
+    }
+    if (e.which < 33) {
+      return true;
+    }
+    input = String.fromCharCode(e.which);
+    return !!/[\d\s]/.test(input);
   }
 }
