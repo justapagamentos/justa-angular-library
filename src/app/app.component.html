@@ -3,7 +3,7 @@
   <h1>
     Welcome to {{ title }}!
   </h1>
-  <input jstMoneyMask />
+  <input [(ngModel)]="rai" jstMoneyMask hasPrefix="false" prefixSymbol='$$ ' />
 </div>
 
 
