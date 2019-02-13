@@ -4,6 +4,11 @@
   "keywords": ["angular-directives", "angular", "ng directives", "input mask"],
   "author": {"name": "Raí Siqueira", "email": "rai.siqueira@justa.com.vc"},
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/justapagamentos/justa-angular-library/tree/master/projects/justa/mask-directive"
+  },
+  "bugs": { "url": "https://github.com/justapagamentos/justa-angular-library/issues"},
   "peerDependencies": {
     "@angular/common": "^7.0.0",
     "@angular/core": "^7.0.0",
