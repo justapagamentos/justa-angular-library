@@ -1,8 +1,10 @@
 # Justa Money Mask Directive
 
-Angular directive to format an input element with _BRL_ money mask.
+![](https://img.shields.io/bundlephobia/minzip/@justa/mask-directive.svg?style=flat-square) ![](https://img.shields.io/bundlephobia/min/@justa/mask-directive.svg?style=flat-square)
 
-## Istall
+Angular directive to format an input element with _BRL_ money mask (and others - See _prefixSymbol_ prop).
+
+## Install
 
 ```bash
 npm install --save @justa/mask-directive
