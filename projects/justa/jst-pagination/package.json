@@ -1,0 +1,19 @@
+{
+  "name": "@justa/jst-pagination",
+  "version": "0.1.0",
+  "keywords": ["angular-directives", "angular", "ng directives", "pagination"],
+  "author": {"name": "Valdery Paes", "email": "valdery.paes@justa.com.vc"},
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/justapagamentos/justa-angular-library/tree/master/projects/justa/jst-pagination"
+  },
+  "bugs": { "url": "https://github.com/justapagamentos/justa-angular-library/issues"},
+  "peerDependencies": {
+    "@angular/common": "^5.2.11",
+    "@angular/core": "^5.3.22"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

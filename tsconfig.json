@@ -23,6 +23,12 @@
       ],
       "@justa/mask-directive/*": [
         "dist/justa/mask-directive/*"
+      ],
+      "@justa/jst-pagination": [
+        "dist/justa/jst-pagination"
+      ],
+      "@justa/jst-pagination/*": [
+        "dist/justa/jst-pagination/*"
       ]
     }
   }
