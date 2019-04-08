@@ -1,3 +1,22 @@
-<p>
-  jst-pagination works!
-</p>
+<form [class]="customClass">
+  <button 
+      type="button"
+      (click)="advance(false)" 
+      [class.disable-arrow]="selectedPage <= 1">
+      <span class="fas fa-chevron-left action" aria-hidden="true"></span>
+  </button>
+  <button 
+      type="button"
+      class="page-item"
+      *ngFor="let page of pagesInScreen" 
+      (click)="notNumber(page) ? null : goToPage(page)" 
+      [ngClass]="{ 'selected': selectedPage === page, 'disable': notNumber(page) }">{{ page }}
+  </button>
+  <button 
+      type="button"
+      (keypress)="advance(false, $event)" 
+      (click)="advance(true)" 
+      [class.disable-arrow]="selectedPage >= allPages.length">
+      <span class="fas fa-chevron-right action" aria-hidden="true"></span>
+  </button>
+</form>
