@@ -11,20 +11,20 @@ import {
 
 @Component({
   selector: 'jst-pagination',
-  templateUrl: './jst-pagination.component.html',
-  styleUrls: ['./jst-pagination.component.scss'],
+  templateUrl: 'jst-pagination.component.html',
+  styleUrls: ['jst-pagination.component.scss'],
 })
 export class JstPaginationComponent implements OnInit, OnChanges {
-  @Input() private numberOfPages: number;
-  @Input() private maxPagesShowed = 5;
-  @Input() private innerElements = 3;
+  @Input() public numberOfPages: number = 1;
+  @Input() public maxPagesShowed = 5;
+  @Input() public innerElements = 3;
   @Input() public customClass: string = '';
 
-  @Output() private pageChanged = new EventEmitter();
+  @Output() public pageChanged = new EventEmitter();
 
   public pagesInScreen: any[];
   public selectedPage = 1;
-  private allPages: number[];
+  public allPages: number[];
 
   constructor() {}
 
@@ -73,7 +73,7 @@ export class JstPaginationComponent implements OnInit, OnChanges {
 
   /**
    * @description Go to a clicked page
-   * @param {number} selectedPage selected page
+   * @param selectedPage selected page
    */
   goToPage(selectedPage: number): void {
     if (!isNaN(selectedPage)) {
@@ -126,9 +126,9 @@ export class JstPaginationComponent implements OnInit, OnChanges {
 
   /**
    * @description Advance or returns 1 from 1 page
-   * @param {boolean} advance true - advance, false - return
+   * @param advance true - advance, false - return
    */
-  advance(advance: boolean): void {
+  advance(advance: boolean, event?): void {
     let actualPage: number;
     if (advance) {
       actualPage =
@@ -143,7 +143,7 @@ export class JstPaginationComponent implements OnInit, OnChanges {
 
   /**
    * @description verify if page is not a number
-   * @param {any} page page to verify
+   * @param page page to verify
    */
   notNumber(page: any): boolean {
     return isNaN(page);

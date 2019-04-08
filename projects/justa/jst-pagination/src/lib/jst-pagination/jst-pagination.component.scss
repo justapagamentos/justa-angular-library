@@ -1,29 +1,30 @@
+$primary-color: #076e95;
 jst-paginate {
   width: 100%;
   font-size: 12px;
   button {
-      cursor: pointer;
-      display: inline;
-      width: fit-content;
-      padding: 0;
-      background-color: transparent;
-      border: none;
-      margin: 0;
-      &.page-item {
-          margin: 0 8px;
-      }
-      &.selected {
-          color: $primary-color;
-      }
+    cursor: pointer;
+    display: inline;
+    width: fit-content;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    margin: 0;
+    &.page-item {
+      margin: 0 8px;
+    }
+    &.selected {
+      color: $primary-color;
+    }
   }
   span {
-      cursor: pointer;
+    cursor: pointer;
   }
   .disable {
-      pointer-events: none;
+    pointer-events: none;
   }
   .disable-arrow {
-      pointer-events: none;
-      opacity: .5;
+    pointer-events: none;
+    opacity: 0.5;
   }
 }
