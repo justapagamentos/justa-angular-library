@@ -12,7 +12,39 @@ import {
 @Component({
   selector: 'jst-pagination',
   templateUrl: 'jst-pagination.component.html',
-  styleUrls: ['jst-pagination.component.scss'],
+  styles: [
+    `
+      jst-pagination {
+        width: 100%;
+        font-size: 12px;
+      }
+      button {
+        cursor: pointer;
+        display: inline;
+        width: fit-content;
+        padding: 0;
+        background-color: transparent;
+        border: none;
+        margin: 0;
+      }
+      button.page-item {
+        margin: 0 8px;
+      }
+      button.selected {
+        color: #076e95;
+      }
+      span {
+        cursor: pointer;
+      }
+      .disable {
+        pointer-events: none;
+      }
+      .disable-arrow {
+        pointer-events: none;
+        opacity: 0.5;
+      }
+    `,
+  ],
 })
 export class JstPaginationComponent implements OnInit, OnChanges {
   @Input() public numberOfPages: number = 1;
