@@ -17,13 +17,8 @@ just call `<jst-pagination></jst-pagination>` by passing the props of your need
 ## Props
  
 | Props | type | default |
-
 |-------|------|---------|
-
 | numberOfPages | number | 1 |
-
 | maxPagesShowed | number | 5 |
-
 | innerElements | number | 3 |
-
 | customClass | string | empty |
