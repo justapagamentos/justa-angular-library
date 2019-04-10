@@ -48,8 +48,8 @@ import {
 })
 export class JstPaginationComponent implements OnInit, OnChanges {
   @Input() public numberOfPages: number = 1;
-  @Input() public maxPagesShowed = 5;
-  @Input() public innerElements = 3;
+  @Input() public maxPagesShowed: number = 5;
+  @Input() public innerElements: number = 3;
   @Input() public customClass: string = '';
 
   @Output() public pageChanged = new EventEmitter();
