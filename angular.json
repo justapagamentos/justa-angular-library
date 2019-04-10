@@ -168,6 +168,41 @@
           }
         }
       }
+    },
+    "@justa/jst-pagination": {
+      "root": "projects/justa/jst-pagination",
+      "sourceRoot": "projects/justa/jst-pagination/src",
+      "projectType": "library",
+      "prefix": "jst",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/justa/jst-pagination/tsconfig.lib.json",
+            "project": "projects/justa/jst-pagination/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/justa/jst-pagination/src/test.ts",
+            "tsConfig": "projects/justa/jst-pagination/tsconfig.spec.json",
+            "karmaConfig": "projects/justa/jst-pagination/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/justa/jst-pagination/tsconfig.lib.json",
+              "projects/justa/jst-pagination/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "jst-library"
