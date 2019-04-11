@@ -14,6 +14,8 @@ npm install --save @justa/mask-directive
 
 Add the `MaskDirectiveModule` in your `app.module.ts` file in the _inports_ array.
 
+**Money Mask**
+
 Add the `jstMoneyMask` Directive to your input.
 
 ## Props
@@ -23,3 +25,9 @@ Add the `jstMoneyMask` Directive to your input.
 | hasDecimal | bool | true |
 | hasPrefix | bool | false |
 | prefixSymbol | string | R$ |
+
+**Document Legal Mask**
+
+Directive only used to format brazilian document (CNPJ/CPF) in a single input
+
+Add the `jstLegalDocumentMask` Directive to your input.
