@@ -1,7 +1,7 @@
 {
   "name": "@justa/mask-directive",
-  "version": "1.0.0",
-  "keywords": ["angular-directives", "angular", "ng directives", "input mask"],
+  "version": "1.1.1",
+  "keywords": ["angular-directives", "angular", "ng directives", "input mask", "brazilian utils"],
   "author": {"name": "Raí Siqueira", "email": "rai.siqueira@justa.com.vc"},
   "license": "MIT",
   "repository": {
@@ -16,7 +16,8 @@
     "inputmask": "^4.0.6"
   },
   "devDependencies": {
-    "inputmask": "^4.0.6"
+    "inputmask": "^4.0.6",
+    "@brazilian-utils/formatters": "^0.1.10"
   },
   "publishConfig": {
     "access": "public"
