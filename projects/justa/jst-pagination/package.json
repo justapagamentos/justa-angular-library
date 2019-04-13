@@ -1,6 +1,6 @@
 {
   "name": "@justa/jst-pagination",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "keywords": ["angular-directives", "angular", "ng directives", "pagination"],
   "author": {"name": "Valdery Paes", "email": "valdery.paes@justa.com.vc"},
   "license": "MIT",
