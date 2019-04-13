@@ -1,12 +1,13 @@
 {
   "name": "@justa/mask-directive",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "keywords": ["angular-directives", "angular", "ng directives", "input mask", "brazilian utils"],
   "author": {"name": "Raí Siqueira", "email": "rai.siqueira@justa.com.vc"},
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/justapagamentos/justa-angular-library/tree/master/projects/justa/mask-directive"
+    "url": "git+https://github.com/justapagamentos/justa-angular-library/tree/master/projects/justa/mask-directive",
+    "directory": "projects/justa/mask-directive"
   },
   "bugs": { "url": "https://github.com/justapagamentos/justa-angular-library/issues"},
   "peerDependencies": {

@@ -6,7 +6,8 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/justapagamentos/justa-angular-library/tree/master/projects/justa/jst-pagination"
+    "url": "git+https://github.com/justapagamentos/justa-angular-library/tree/master/projects/justa/jst-pagination",
+    "directory": "projects/justa/jst-pagination"
   },
   "bugs": { "url": "https://github.com/justapagamentos/justa-angular-library/issues"},
   "peerDependencies": {
