@@ -60,8 +60,18 @@
     "typescript": "~3.1.6"
   },
   "contributors": [
-    {"name": "Rai Siqueira", "email": "rai.siqueira@justa.com.vc", "url": "https://raisiqueira.dev"},
-    {"name": "Valdery Paes", "email": "valdery.paes@justa.com.vc"},
-    {"name": "Matheus Gomes", "email": "matheus.gomes@justa.com.vc"}
+    {
+      "name": "Rai Siqueira",
+      "email": "rai.siqueira@justa.com.vc",
+      "url": "https://raisiqueira.dev"
+    },
+    {
+      "name": "Valdery Paes",
+      "email": "valdery.paes@justa.com.vc"
+    },
+    {
+      "name": "Matheus Gomes",
+      "email": "matheus.gomes@justa.com.vc"
+    }
   ]
 }

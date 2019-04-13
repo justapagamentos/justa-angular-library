@@ -3,5 +3,6 @@
   "dest": "../../../dist/justa/mask-directive",
   "lib": {
     "entryFile": "src/public_api.ts"
-  }
+  },
+  "whitelistedNonPeerDependencies": ["."]
 }
