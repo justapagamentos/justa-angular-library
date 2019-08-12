@@ -10,4 +10,4 @@ before_script:
 
 script:
   - npm install
-  - npm run
+  - npm run build:all
