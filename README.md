@@ -6,9 +6,9 @@ An collection of _Angular Modules_ and _libraries_ used in some applications of 
 
 | Package | Version | NPM Link | Bundle size |
 |---------|---------|-----| ----------------- |
-| jst-pagination | ![npm (scoped)](https://img.shields.io/npm/v/@justa/jst-pagination?color=%23076e95) | [https://www.npmjs.com/package/@justa/jst-pagination]() | ![npm bundle size (scoped)](https://img.shields.io/bundlephobia/minzip/@justa/jst-pagination?color=%23076e95) |
-| mask-directive | ![npm (scoped)](https://img.shields.io/npm/v/@justa/mask-directive?color=%23076e95) | [https://www.npmjs.com/package/@justa/mask-directive](https://www.npmjs.com/package/@justa/mask-directive)  | ![npm bundle size (scoped)](https://img.shields.io/bundlephobia/minzip/@justa/mask-directive?color=%23076e95) |
-| ng-validators | ![npm (scoped)](https://img.shields.io/npm/v/@justa/ng-validators?color=%23076e95) | [https://www.npmjs.com/package/@justa/ng-validators]() | ![npm bundle size (scoped)](https://img.shields.io/bundlephobia/minzip/@justa/ng-validators?color=%23076e95) |
+| jst-pagination | ![npm (scoped)](https://img.shields.io/npm/v/@justa/jst-pagination?color=%23076e95) | [@justa/jst-pagination](https://www.npmjs.com/package/@justa/jst-pagination) | ![npm bundle size (scoped)](https://img.shields.io/bundlephobia/minzip/@justa/jst-pagination?color=%23076e95) |
+| mask-directive | ![npm (scoped)](https://img.shields.io/npm/v/@justa/mask-directive?color=%23076e95) | [@justa/mask-directive](https://www.npmjs.com/package/@justa/mask-directive)  | ![npm bundle size (scoped)](https://img.shields.io/bundlephobia/minzip/@justa/mask-directive?color=%23076e95) |
+| ng-validators | ![npm (scoped)](https://img.shields.io/npm/v/@justa/ng-validators?color=%23076e95) | [@justa/ng-validators](https://www.npmjs.com/package/@justa/ng-validators) | ![npm bundle size (scoped)](https://img.shields.io/bundlephobia/minzip/@justa/ng-validators?color=%23076e95) |
 
 ## Develop only
 
