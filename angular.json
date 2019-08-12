@@ -203,6 +203,76 @@
           }
         }
       }
+    },
+    "@justa/validators": {
+      "projectType": "library",
+      "root": "projects/justa/validators",
+      "sourceRoot": "projects/justa/validators/src",
+      "prefix": "validators",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/justa/validators/tsconfig.lib.json",
+            "project": "projects/justa/validators/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/justa/validators/src/test.ts",
+            "tsConfig": "projects/justa/validators/tsconfig.spec.json",
+            "karmaConfig": "projects/justa/validators/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/justa/validators/tsconfig.lib.json",
+              "projects/justa/validators/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "@justa/utilities": {
+      "projectType": "library",
+      "root": "projects/justa/utilities",
+      "sourceRoot": "projects/justa/utilities/src",
+      "prefix": "utilities",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/justa/utilities/tsconfig.lib.json",
+            "project": "projects/justa/utilities/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/justa/utilities/src/test.ts",
+            "tsConfig": "projects/justa/utilities/tsconfig.spec.json",
+            "karmaConfig": "projects/justa/utilities/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/justa/utilities/tsconfig.lib.json",
+              "projects/justa/utilities/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "jst-library"
