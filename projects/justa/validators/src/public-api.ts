@@ -1,5 +1,5 @@
 /*
- * Public API Surface of ng-validators
+ * Public API Surface of validators
  */
 
 export * from "./validators";

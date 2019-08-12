@@ -21,7 +21,7 @@ Example with **CNPJ Validator**
 ```typescript
 import { Component } from "@angular/core";
 import { FormGroup, FormControl } from "@angular/forms";
-import { jstValidators } from "@justa/ng-validators";
+import { jstValidators } from validators;
 
 @Component({
   selector: "app",
