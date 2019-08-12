@@ -203,6 +203,41 @@
           }
         }
       }
+    },
+    "@justa/ng-validators": {
+      "projectType": "library",
+      "root": "projects/justa/ng-validators",
+      "sourceRoot": "projects/justa/ng-validators/src",
+      "prefix": "ng-validators",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/justa/ng-validators/tsconfig.lib.json",
+            "project": "projects/justa/ng-validators/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/justa/ng-validators/src/test.ts",
+            "tsConfig": "projects/justa/ng-validators/tsconfig.spec.json",
+            "karmaConfig": "projects/justa/ng-validators/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/justa/ng-validators/tsconfig.lib.json",
+              "projects/justa/ng-validators/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "jst-library"

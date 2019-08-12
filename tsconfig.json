@@ -29,6 +29,12 @@
       ],
       "@justa/jst-pagination/*": [
         "dist/justa/jst-pagination/*"
+      ],
+      "@justa/ng-validators": [
+        "dist/justa/ng-validators"
+      ],
+      "@justa/ng-validators/*": [
+        "dist/justa/ng-validators/*"
       ]
     }
   }

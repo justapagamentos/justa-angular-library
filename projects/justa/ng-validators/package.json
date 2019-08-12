@@ -1,0 +1,44 @@
+{
+  "name": "@justa/ng-validators",
+  "description": "An collection of Angular reactive forms validators",
+  "version": "1.1.4",
+  "peerDependencies": {
+    "@angular/common": "^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0",
+    "@angular/core": "^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0",
+    "@angular/forms": "^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0",
+    "@brazilian-utils/validators": "^0.1.9",
+    "moment": "^2.24.0"
+  },
+  "author": "Rai Siqueira <rai.siqueira@justa.com.vc> (https://raisiqueira.dev)",
+  "license": "MIT",
+  "keywords": [
+    "angular",
+    "angular2",
+    "angular 2",
+    "angular4",
+    "angular 4",
+    "angular5",
+    "angular 5",
+    "angular6",
+    "angular 6",
+    "directive",
+    "reactive",
+    "template",
+    "forms",
+    "validate",
+    "validation",
+    "validators",
+    "custom"
+  ],
+  "bugs": {
+    "url": "https://github.com/justapagamentos/justa-angular-library/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/justapagamentos/justa-angular-library.git",
+    "directory": "projects/justa/ng-validators"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

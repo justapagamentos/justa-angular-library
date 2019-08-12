@@ -10,6 +10,8 @@
     "e2e": "ng e2e",
     "build:masks": " ng build @justa/mask-directive",
     "dev:masks": "ng build @justa/mask-directive --watch",
+    "build:validators": "ng build @justa/ng-validators",
+    "dev:validators": "ng build @justa/ng-validators --watch",
     "build:clean": "rimraf dist",
     "release": "np"
   },
@@ -24,9 +26,12 @@
     "@angular/platform-browser": "~8.1.3",
     "@angular/platform-browser-dynamic": "~8.1.3",
     "@angular/router": "~8.1.3",
+    "@brazilian-utils/validators": "^0.1.9",
     "core-js": "^3.1.4",
     "inputmask": "^4.0.5",
+    "moment": "^2.24.0",
     "rxjs": "~6.5.2",
+    "tslib": "^1.9.0",
     "zone.js": "~0.10.0"
   },
   "devDependencies": {
