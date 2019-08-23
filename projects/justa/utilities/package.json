@@ -1,8 +1,32 @@
 {
   "name": "@justa/utilities",
-  "version": "0.0.1",
+  "version": "1.0.0",
+  "keywords": [
+    "angular-directives",
+    "angular",
+    "ng directives",
+    "pipe",
+    "brazilian utils formatters"
+  ],
+  "author": {
+    "name": "Raí Siqueira",
+    "email": "rai.siqueira@justa.com.vc"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/justapagamentos/justa-angular-library.git",
+    "directory": "projects/justa/utilities"
+  },
+  "bugs": {
+    "url": "https://github.com/justapagamentos/justa-angular-library/issues"
+  },
   "peerDependencies": {
     "@angular/common": "^8.1.2",
-    "@angular/core": "^8.1.2"
+    "@angular/core": "^8.1.2",
+    "@brazilian-utils/formatters": "^0.1.10"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
