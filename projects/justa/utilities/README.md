@@ -1,24 +1,29 @@
 # Utilities
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.1.2.
+![npm (scoped)](https://img.shields.io/npm/v/@justa/utilities?color=%23076e95) 
+![npm bundle size (scoped)](https://img.shields.io/bundlephobia/minzip/@justa/utilities?color=%23076e95) 
 
-## Code scaffolding
+A serie of utilities for angular applications, like:
 
-Run `ng generate component component-name --project utilities` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project utilities`.
-> Note: Don't forget to add `--project utilities` or else it will be added to the default project in your `angular.json` file. 
+- LegalDocumentPipe: Format
 
-## Build
 
-Run `ng build utilities` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Install 
 
-## Publishing
+    npm install --save @justa/utilities
 
-After building your library with `ng build utilities`, go to the dist folder `cd dist/utilities` and run `npm publish`.
+## Usage
 
-## Running unit tests
+*LegalDocumentPipe*
 
-Run `ng test utilities` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Add the `legalDocumentPipe` to the module of your application, like `app.module.ts`:
 
-## Further help
+    import { LegalDocumentPipe } from '@justa/utilities';
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Then add the imported pipe to the @NgModule declaration of the component which you are using in, like:
+
+    @NgModule({
+      declarations: [LegalDocumentPipe]
+    })
+
+Now you can use the `legalDocumentPipe` like a regular pipe in wherever tag you want
