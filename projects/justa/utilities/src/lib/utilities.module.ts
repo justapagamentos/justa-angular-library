@@ -1,10 +1,8 @@
 import { NgModule } from '@angular/core';
 import { LegalDocumentPipe } from './pipes/legal-document.pipe';
-import { UtilitiesComponent } from './utilities.component';
-
 @NgModule({
-  declarations: [UtilitiesComponent, LegalDocumentPipe],
+  declarations: [LegalDocumentPipe],
   imports: [],
-  exports: [UtilitiesComponent, LegalDocumentPipe],
+  exports: [LegalDocumentPipe],
 })
 export class UtilitiesModule {}

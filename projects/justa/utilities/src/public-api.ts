@@ -2,6 +2,5 @@
  * Public API Surface of utilities
  */
 
-export * from './lib/utilities.service';
-export * from './lib/utilities.component';
+export { LegalDocumentPipe } from './lib/pipes/legal-document.pipe';
 export * from './lib/utilities.module';
