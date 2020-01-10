@@ -1,4 +1,4 @@
-import { AbstractControl, ValidationErrors } from "@angular/forms";
+import { AbstractControl, FormGroup, ValidationErrors } from "@angular/forms";
 import {
   isValidCnpj,
   isValidCpf,
@@ -106,11 +106,45 @@ function validateTextKey(control: AbstractControl): ValidationErrors | null {
   return match ? { isInvalid: contentWhenInvalid } : null;
 }
 
+/**
+ * @description Provide a validator to compare two values on a FormGroup based on min/max value
+ * @example mustMatchMinMaxValue('controlMinValue', 'controlMaxValue')
+ */
+export function mustMatchMinMaxValue(
+  controlName: string,
+  matchControlName: string,
+): (formGroup: FormGroup) => void {
+  return (formGroup: FormGroup) => {
+    const control = formGroup.controls[controlName];
+    const matchingControl = formGroup.controls[matchControlName];
+    const controlValue =
+      control.value && typeof control.value === 'string'
+        ? Number(control.value.replace(/\W/gi, ''))
+        : control.value;
+    const matchingControlValue =
+      matchingControl.value && typeof matchingControl.value === 'string'
+        ? Number(matchingControl.value.replace(/\W/gi, ''))
+        : matchingControl.value;
+
+    if (matchingControl.errors && !matchingControl.errors.mustMatch) {
+      return;
+    }
+
+    // set new error
+    if (matchingControlValue < controlValue) {
+      matchingControl.setErrors({ mustMatch: true });
+    } else {
+      matchingControl.setErrors(null);
+    }
+  };
+}
+
 export const jstValidators = {
   validateDate,
   validateCNPJ,
   validateCPF,
   validatePhone,
   validateURL,
-  validateTextKey
+  validateTextKey,
+  mustMatchMinMaxValue,
 };
