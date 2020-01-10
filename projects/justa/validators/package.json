@@ -1,7 +1,7 @@
 {
   "name": "@justa/ng-validators",
   "description": "An collection of Angular reactive forms validators",
-  "version": "1.1.4",
+  "version": "1.2.0",
   "peerDependencies": {
     "@angular/common": "^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0",
     "@angular/core": "^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0",
