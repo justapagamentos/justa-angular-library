@@ -1,5 +1,5 @@
 <p align="center">
- <img width="80%" height="80%" src="./assets/project-logo.png">
+ <img width="80%" height="80%" src="./assets/project-logo.svg">
 </p>
 
 Some _Angular Reactive Forms_ custom validators. ![npm bundle size](https://img.shields.io/bundlephobia/minzip/@justa/ng-validators.svg)
