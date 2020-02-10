@@ -1,4 +1,9 @@
-import { AbstractControl, FormGroup, ValidationErrors } from "@angular/forms";
+import {
+  AbstractControl,
+  FormGroup,
+  ValidationErrors,
+  ValidatorFn
+} from "@angular/forms";
 import {
   isValidCnpj,
   isValidCpf,
@@ -6,6 +11,7 @@ import {
 } from "@brazilian-utils/validators";
 import * as Moment from "moment";
 import { groupOfAllowed, groupOfNotAllowed, urlPattern } from "./regexList";
+import { removeNonDigits, isEmptyInputValue } from "../lib/utils";
 
 interface InvalidContent {
   expected: boolean;
@@ -13,13 +19,6 @@ interface InvalidContent {
 }
 
 const moment = Moment;
-
-/**
- * @description remove all non digits caracters
- */
-function removeNonDigits(data: string): string {
-  return data.replace(/\D/g, "");
-}
 
 /**
  * @description validateCNPJ for FormBuilder
@@ -42,26 +41,37 @@ function validateCPF(control: AbstractControl): ValidationErrors | null {
 }
 
 /**
- * @description valicação de data seguindo modelo do FormBuilder
+ * @description Validate a date on a formControl with a format.
+ * @example field: ['', jstValidators.validateDate('YYYY/MM/DD')]
  */
-function validateDate(control: AbstractControl) {
-  const value = control.value;
-  const valueOnlyNumbers = value.replace(/[^0-9]/g, "");
+function validateDate(format: string = 'DD/MM/YYYY'): ValidatorFn {
+  return (control: AbstractControl): ValidationErrors | null => {
+    const value = control.value;
 
-  if (valueOnlyNumbers.length >= 8) {
-    const date = moment(value, "DD/MM/YYYY");
+    if (isEmptyInputValue(value)) {
+      return null; // don't validate empty values
+    }
 
-    if (date.year()) {
-      const year = date.year().toString();
-      const validateYear = (year: string) => /(?:(?:19|20)[0-9]{2})/.test(year);
+    const valueOnlyNumbers = value.replace(/[^0-9]/g, "");
 
-      if (validateYear(year)) {
-        return null;
+    if (valueOnlyNumbers.length >= 8) {
+      const date = moment(value, format);
+
+      if (date.year()) {
+        const year = date.year().toString();
+        const validateYear = (year: string) => /(?:(?:19|20)[0-9]{2})/.test(year);
+
+        if (validateYear(year)) {
+          return null;
+        }
       }
     }
-  }
 
-  return { message: "Data inválida." };
+    return {
+      invalidDate:
+      { expected: `A data deve seguir o formato ${format}`,
+      message: "Data inválida!" } };
+  }
 }
 
 /**
