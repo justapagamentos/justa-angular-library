@@ -3,4 +3,3 @@
  */
 
 export * from "./validators";
-export * from './lib/ng-validators.module';
