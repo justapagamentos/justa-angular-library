@@ -1,11 +1,11 @@
 {
   "name": "@justa/ng-validators",
   "description": "An collection of Angular reactive forms validators",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "peerDependencies": {
-    "@angular/common": "^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0",
-    "@angular/core": "^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0",
-    "@angular/forms": "^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0",
+    "@angular/common": "^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0 || ^9.0.0",
+    "@angular/core": "^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0 || ^9.0.0",
+    "@angular/forms": "^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0 || ^9.0.0",
     "@brazilian-utils/validators": "^0.1.9",
     "moment": "^2.24.0"
   },
