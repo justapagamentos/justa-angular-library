@@ -1,8 +1,8 @@
-# Justa Money Mask Directive
+# JST Mask Directives
 
 ![](https://img.shields.io/bundlephobia/minzip/@justa/mask-directive.svg?style=flat-square) ![](https://img.shields.io/bundlephobia/min/@justa/mask-directive.svg?style=flat-square)
 
-Angular directive to format an input element with _BRL_ money mask (and others - See _prefixSymbol_ prop).
+Justa Pagamentos Angular 2+ Directives! A set of NG2 Directives to improve your forms.
 
 ## Install
 
@@ -10,15 +10,23 @@ Angular directive to format an input element with _BRL_ money mask (and others -
 npm install --save @justa/mask-directive
 ```
 
+to use the _money mask_ add the [inputmask](https://www.npmjs.com/package/inputmask) dependency.
+
+```bash
+npm install --save @justa/mask-directive inputmask
+```
+
 ## Usage
 
 Add the `MaskDirectiveModule` in your `app.module.ts` file in the _inports_ array.
 
-**Money Mask**
+## Masks
 
-Add the `jstMoneyMask` Directive to your input.
+### Money Mask
 
-## Props
+Add the `jstMoneyMask` directive to your input.
+
+### Props (inputs)
 
 | Props | type | default |
 |-------|------|---------|
@@ -26,8 +34,24 @@ Add the `jstMoneyMask` Directive to your input.
 | hasPrefix | bool | false |
 | prefixSymbol | string | R$ |
 
-**Document Legal Mask**
+**Example**
+
+```html
+<input jstMoneyMask [hasDecimal]="true" prefixSymbol="$" placeholder="$0.00">
+```
+
+### Legal document Mask (Brazil only)
 
 Directive only used to format brazilian document (CNPJ/CPF) in a single input
 
 Add the `jstLegalDocumentMask` Directive to your input.
+
+**Example**
+
+```html
+<input jstLegalDocumentMask placeholder="000.000.000-00">
+```
+
+## License
+
+MIT @ Justa Pagamentos
