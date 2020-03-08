@@ -1,6 +1,8 @@
-# @justa/ng-validators ![npm bundle size](https://img.shields.io/bundlephobia/minzip/@justa/ng-validators.svg)
+<p align="center">
+ <img width="80%" height="80%" src="./assets/project-logo.svg">
+</p>
 
-Some _Angular Reactive Forms_ custom validators.
+Some _Angular Reactive Forms_ custom validators. ![npm bundle size](https://img.shields.io/bundlephobia/minzip/@justa/ng-validators.svg)
 
 ## Install
 
@@ -48,15 +50,19 @@ export class AppFormComponent implements OnInit {
 
 ## Available custom validators for controls
 
-- validateDate (format: DD/MM/YYYY)
-- validateCNPJ (format: xx.xxx.xxx/xxxx-xx | xxxxxxxxxxxxxx)
-- validateCPF (format: xxx.xxx.xxx-xx | xxxxxxxxxxx)
-- validatePhone (format: (xx)xxxxx-xxxx | (xx)xxxx-xxxx | xxxxxxxxxx)
-- validateURL (format: http[s]://lol.com)
+| Validator name | usage |
+|----------------| ------ |
+| validateDate | jstValidators.validateDate() |
+| validateCNPJ | jstValidators.validateCNPJ |
+| validateCPF | jstValidators.validateCPF |
+| validatePhone | jstValidators.validatePhone |
+| validateURL | jstValidators.validateURL |
 
 ## Available custom validators for FormGroup
 
-- mustMatchMinMaxValue(minControl: string, maxControl: string): void;
+| Validator name | usage |
+| ---------------| ----- |
+| mustMatchMinMaxValue | jstValidators.mustMatchMinMaxValue('minControl', 'maxControl') |
 
 ### Using Validators for FormGroup
 
@@ -92,7 +98,6 @@ export class AppFormComponent implements OnInit {
     }
 }
 ```
-
 
 ## Build (dev only)
 
