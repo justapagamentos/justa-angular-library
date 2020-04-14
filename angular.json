@@ -273,6 +273,41 @@
           }
         }
       }
+    },
+    "@justa/control-error": {
+      "projectType": "library",
+      "root": "projects/justa/control-error",
+      "sourceRoot": "projects/justa/control-error/src",
+      "prefix": "control-error",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/justa/control-error/tsconfig.lib.json",
+            "project": "projects/justa/control-error/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/justa/control-error/src/test.ts",
+            "tsConfig": "projects/justa/control-error/tsconfig.spec.json",
+            "karmaConfig": "projects/justa/control-error/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/justa/control-error/tsconfig.lib.json",
+              "projects/justa/control-error/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "jst-library"

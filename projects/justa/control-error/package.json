@@ -1,0 +1,24 @@
+{
+  "name": "@justa/control-error",
+  "version": "0.0.1-alpha.0",
+  "description": "A form Control error handler, capable of display feedback to users without any interaction with HTML on the client-side. Thus auto generating the necessary DOM elements",
+  "author": "Raí Siqueira <rai.siqueira@justa.com.vc>",
+  "keywords": [
+    "formControlName",
+    "angular",
+    "reactive forms"
+  ],
+  "peerDependencies": {
+    "@angular/common": ">=8.0.0 || >= 9.0.0",
+    "@angular/core": ">=8.0.0 || >= 9.0.0",
+    "@angular/forms": ">=8.0.0 || >= 9.0.0",
+    "@angular/router": ">=8.0.0 || >= 9.0.0",
+    "rxjs": ">=6.0.0",
+    "ngx-material-file-input": "file:./lib/packages/ngx-material-file-input-2.1.1.tgz"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/justapagamentos/justa-angular-library.git",
+    "directory": "projects/justa/control-error"
+  }
+}
