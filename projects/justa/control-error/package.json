@@ -13,12 +13,17 @@
     "@angular/core": ">=8.0.0 || >= 9.0.0",
     "@angular/forms": ">=8.0.0 || >= 9.0.0",
     "@angular/router": ">=8.0.0 || >= 9.0.0",
-    "rxjs": ">=6.0.0",
-    "ngx-material-file-input": "file:./lib/packages/ngx-material-file-input-2.1.1.tgz"
+    "rxjs": ">=6.0.0"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/justapagamentos/justa-angular-library.git",
     "directory": "projects/justa/control-error"
+  },
+  "bugs": {
+    "url": "https://github.com/justapagamentos/justa-angular-library/issues"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

@@ -1,5 +1,5 @@
 import { InjectionToken } from '@angular/core';
-import { ByteFormatPipe } from 'ngx-material-file-input';
+import { ByteFormatPipe } from '../pipe/byte-format.pipe';
 
 const byteFormat = new ByteFormatPipe({ sizeUnit: 'Byte' });
 

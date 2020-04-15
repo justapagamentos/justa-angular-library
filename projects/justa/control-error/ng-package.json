@@ -3,5 +3,8 @@
   "dest": "../../../dist/justa/control-error",
   "lib": {
     "entryFile": "src/public_api.ts"
-  }
+  },
+  "whitelistedNonPeerDependencies": [
+    "."
+  ]
 }
