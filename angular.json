@@ -276,7 +276,7 @@
         }
       }
     },
-    "@justa/control-error": {
+    "@justa/ngx-control-error": {
       "projectType": "library",
       "root": "projects/justa/control-error",
       "sourceRoot": "projects/justa/control-error/src",

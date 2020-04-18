@@ -10,7 +10,7 @@ Built on top of the native angular direactives formControl and formControlName, 
 Import the `JstControlErrorsModule` into your module to use the Control Errors directives.
 
 ```ts
-import { JstControlErrorsModule } from '@justa/control-error'
+import { JstControlErrorsModule } from '@justa/ngx-control-error'
 
 @NgModule({
   declarations: [AppComponent],

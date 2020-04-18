@@ -1,6 +1,6 @@
 {
-  "name": "@justa/control-error",
-  "version": "0.0.1-alpha.0",
+  "name": "@justa/ngx-control-error",
+  "version": "1.0.0-alpha.0",
   "description": "A form Control error handler, capable of display feedback to users without any interaction with HTML on the client-side. Thus auto generating the necessary DOM elements",
   "author": "Raí Siqueira <rai.siqueira@justa.com.vc>",
   "keywords": [

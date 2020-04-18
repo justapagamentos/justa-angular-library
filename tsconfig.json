@@ -42,10 +42,10 @@
       "@justa/utilities/*": [
         "dist/justa/utilities/*"
       ],
-      "@justa/control-error": [
+      "@justa/ngx-control-error": [
         "dist/justa/control-error"
       ],
-      "@justa/control-error/*": [
+      "@justa/ngx-control-error/*": [
         "dist/justa/control-error/*"
       ]
     }
