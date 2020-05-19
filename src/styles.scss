@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'grid-system';
+
+:root {
+  /* brand color */
+  --primary-color: #076e95;
+  --secondary-color: #41afd8;
+  --tertiary-color: #86d4f1;
+  --quarternary-color: #1b4859;
+
+  /* app colors */
+  --danger-color: #df5a48;
+  --light-color: #f4f4f4;
+  --dark-color: #484848;
+  --text-main-color: #4a4a4a;
+  --white: #fff;
+  --white-alpha: rgba(255, 255, 255, 0.1);
+  --black: #000;
+  --black-alpha: rgba(0, 0, 0, 0.1);
+  --light-grey: rgba(255, 255, 255, 0.1);
+  --green-color: rgba(132, 248, 132, 1);
+
+  /* html elements colors */
+  --hr-color: rgba(221, 221, 221, 1);
+}
