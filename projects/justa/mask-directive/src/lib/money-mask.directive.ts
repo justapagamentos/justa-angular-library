@@ -1,6 +1,9 @@
 import { Directive, Input, OnInit, ElementRef, HostListener } from '@angular/core';
 import InputMask from 'inputmask';
 
+/**
+ * @deprecated Use `jstCurrencyMask` instead.
+ */
 @Directive({
   selector: '[jstMoneyMask]',
 })
