@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/justapagamentos/justa-angular-library.svg?branch=master)](https://travis-ci.com/justapagamentos/justa-angular-library)
+
 # Justa Angular Library
 
 An collection of _Angular Modules_ and _libraries_ used in some applications of the Justa Payments.
