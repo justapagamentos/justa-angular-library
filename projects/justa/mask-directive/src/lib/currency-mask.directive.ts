@@ -74,6 +74,6 @@ export class CurrencyMaskDirective implements OnInit, OnDestroy, ControlValueAcc
     const value =
       parseFloat(event.target.value.replace(',', '.')) *
       this.currencyMultiplier;
-    this.onChange?.(value);
+    this.onChange(value);
   }
 }
