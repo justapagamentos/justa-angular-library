@@ -73,11 +73,7 @@ export class CurrencyMaskDirective implements OnInit, OnDestroy, ControlValueAcc
   }
 
   setDisabledState(isDisabled: boolean): void {
-    if (isDisabled) {
-      this.control.disable();
-      return;
-    }
-    this.control.enable();
+    this.renderer.setProperty(this.elementRef.nativeElement, 'disabled', isDisabled);
   }
 
   @HostListener('blur', ['$event'])
