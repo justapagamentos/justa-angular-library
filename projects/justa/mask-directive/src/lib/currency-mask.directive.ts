@@ -8,7 +8,7 @@ import {
   OnDestroy,
   forwardRef,
 } from '@angular/core';
-import { AbstractControl, ControlValueAccessor, NG_VALUE_ACCESSOR, NgControl } from '@angular/forms';
+import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import InputMask from 'inputmask';
 
 @Directive({
@@ -31,7 +31,7 @@ export class CurrencyMaskDirective implements OnInit, OnDestroy, ControlValueAcc
   private rendererTimeout?: number;
   private masker?: any;
 
-  constructor(private elementRef: ElementRef, private renderer: Renderer2, private _control: NgControl) {
+  constructor(private elementRef: ElementRef, private renderer: Renderer2) {
     this.masker = new InputMask({
       alias: 'currency',
       autoGroup: true,
@@ -43,10 +43,6 @@ export class CurrencyMaskDirective implements OnInit, OnDestroy, ControlValueAcc
       numericInput: true,
       prefix: this.currencyPrefix,
     });
-  }
-
-  get control(): AbstractControl {
-    return this._control.control;
   }
 
   ngOnInit() {
