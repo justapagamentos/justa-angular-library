@@ -1,11 +1,11 @@
-import { Directive, ElementRef, HostListener, Renderer2, OnDestroy } from '@angular/core';
+import { Directive, ElementRef, HostListener, Renderer2, OnDestroy, OnInit } from '@angular/core';
 import { ControlValueAccessor, NgControl } from '@angular/forms';
 import { formatCpf, formatCnpj } from './utils';
 
 @Directive({
   selector: '[jstLegalDocumentMask]',
 })
-export class LegalDocumentMaskDirective implements ControlValueAccessor, OnDestroy {
+export class LegalDocumentMaskDirective implements ControlValueAccessor, OnDestroy, OnInit {
   onChange = (value: any) => {};
   onTouched = () => {};
 
@@ -16,6 +16,14 @@ export class LegalDocumentMaskDirective implements ControlValueAccessor, OnDestr
     private renderer: Renderer2,
     private _control: NgControl,
     ) {}
+
+  ngOnInit(): void {
+    const unformattedValue = this.el.nativeElement.value;
+    if(unformattedValue && unformattedValue.length > 0) {
+      const value = this.returnValue(unformattedValue);
+      this.writeValue(value);
+    }
+  }
 
   ngOnDestroy() {
     clearTimeout(this.writeTimeout);
