@@ -78,6 +78,13 @@ export class LegalDocumentMaskDirective implements ControlValueAccessor, OnDestr
     event.target.value = value;
   }
 
+  @HostListener('ngModelChange', ['$event'])
+  ngModelChangeInput(event: any): void {
+    const value = this.returnValue(event);
+    this.writeValue(value);
+  }
+
+
   writeValue(value: any) {
     this.writeTimeout = setTimeout(() => {
       this.renderer.setProperty(this.el.nativeElement, 'value', value);
