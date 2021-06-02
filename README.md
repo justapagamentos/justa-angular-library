@@ -1,24 +1,39 @@
+<h1 align="center">Justa Angular Library 🅰️</h1>
+
+<p align="center">
 [![Build Status](https://travis-ci.com/justapagamentos/justa-angular-library.svg?branch=master)](https://travis-ci.com/justapagamentos/justa-angular-library)
+</p>
 
-# Justa Angular Library
+> An collection of _Angular Modules_ and _libraries_ used in some applications of the Justa Payments.
 
-An collection of _Angular Modules_ and _libraries_ used in some applications of the Justa Payments.
+## Packages into this monorepo:
 
-## Packages
+| Package        | Description                                                        | Version                                                                             | NPM Link                                                                     | Bundle size                                                                                                   | Status |
+| -------------- | ------------------------------------------------------------------ | ----------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------ |
+| mask-directive | Collection of Angular directives to use with input elements        | ![npm (scoped)](https://img.shields.io/npm/v/@justa/mask-directive?color=%23076e95) | [@justa/mask-directive](https://www.npmjs.com/package/@justa/mask-directive) | ![npm bundle size (scoped)](https://img.shields.io/bundlephobia/minzip/@justa/mask-directive?color=%23076e95) | ✅     |
+| ng-validators  | Collection of Angular reactive forms validators                    | ![npm (scoped)](https://img.shields.io/npm/v/@justa/ng-validators?color=%23076e95)  | [@justa/ng-validators](https://www.npmjs.com/package/@justa/ng-validators)   | ![npm bundle size (scoped)](https://img.shields.io/bundlephobia/minzip/@justa/ng-validators?color=%23076e95)  | ✅     |
+| jst-pagination | Angular component that create a pagination interface without drama | ![npm (scoped)](https://img.shields.io/npm/v/@justa/jst-pagination?color=%23076e95) | [@justa/jst-pagination](https://www.npmjs.com/package/@justa/jst-pagination) | ![npm bundle size (scoped)](https://img.shields.io/bundlephobia/minzip/@justa/jst-pagination?color=%23076e95) | ⚠️     |
 
-| Package | Version | NPM Link | Bundle size |
-|---------|---------|-----| ----------------- |
-| jst-pagination | ![npm (scoped)](https://img.shields.io/npm/v/@justa/jst-pagination?color=%23076e95) | [@justa/jst-pagination](https://www.npmjs.com/package/@justa/jst-pagination) | ![npm bundle size (scoped)](https://img.shields.io/bundlephobia/minzip/@justa/jst-pagination?color=%23076e95) |
-| mask-directive | ![npm (scoped)](https://img.shields.io/npm/v/@justa/mask-directive?color=%23076e95) | [@justa/mask-directive](https://www.npmjs.com/package/@justa/mask-directive)  | ![npm bundle size (scoped)](https://img.shields.io/bundlephobia/minzip/@justa/mask-directive?color=%23076e95) |
-| ng-validators | ![npm (scoped)](https://img.shields.io/npm/v/@justa/ng-validators?color=%23076e95) | [@justa/ng-validators](https://www.npmjs.com/package/@justa/ng-validators) | ![npm bundle size (scoped)](https://img.shields.io/bundlephobia/minzip/@justa/ng-validators?color=%23076e95) |
-| utilities | ![npm (scoped)](https://img.shields.io/npm/v/@justa/utilities?color=%23076e95) | [@justa/utilities](https://www.npmjs.com/package/@justa/utilities) | ![npm bundle size (scoped)](https://img.shields.io/bundlephobia/minzip/@justa/utilities?color=%23076e95) |
+**Legends**: ✅ (Active) | ⚠️ (Deprecated)
 
-## Develop only
+## Contributing
 
-To run an project based on _project_ folder, run the this command:
+Clone this repo and install dependencies with [Yarn](http://yarnpkg.org/), after that you can start to help-us to improve these libraries.
+
+All libraries are in the projects/justa folder. Before coding make sure if you are changing the right project and files.
+
+### Develop and build any package
+
+To see all changes across you development run these command to watch all changes:
 
 ```bash
-ng build @justa/PROJECT_FOLDER --watch
+ng build @justa/PACKAGE_NAME --watch
+```
+
+And to build a package, you can run same command, but without the _watch_ flag:
+
+```bash
+ng build @justa/PACKAGE_NAME
 ```
 
 ## License
