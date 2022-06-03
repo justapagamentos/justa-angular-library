@@ -12,7 +12,7 @@
   "bugs": { "url": "https://github.com/justapagamentos/justa-angular-library/issues"},
   "peerDependencies": {
     "@angular/common": "^5.2.11",
-    "@angular/core": "^5.3.22"
+    "@angular/core": "^5.2.11"
   },
   "publishConfig": {
     "access": "public"
