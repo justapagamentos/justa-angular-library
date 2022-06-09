@@ -1,5 +1,27 @@
 {
   "extends": [
     "config:base"
+  ],
+  "schedule": [
+    "every weekend"
+  ],
+  "dependencyDashboard": true,
+  "stabilityDays": 7,
+  "prCreation": "not-pending",
+  "additionalBranchPrefix": "deps/",
+  "addLabels": [
+    "Type: Maintenance"
+  ],
+  "packageRules": [
+    {
+      "automerge": true,
+      "matchUpdateTypes": [
+        "minor",
+        "patch",
+        "pin",
+        "digest"
+      ],
+      "automergeStrategy": "rebase"
+    }
   ]
 }
