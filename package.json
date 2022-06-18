@@ -41,7 +41,7 @@
     "inputmask": "4.0.9",
     "moment": "2.24.0",
     "rxjs": "6.5.5",
-    "tslib": "1.11.1",
+    "tslib": "1.14.1",
     "zone.js": "0.10.3"
   },
   "devDependencies": {
@@ -80,7 +80,7 @@
     "rimraf": "2.7.1",
     "ts-node": "8.10.2",
     "tsickle": "0.38.1",
-    "tslib": "1.11.1",
+    "tslib": "1.14.1",
     "tslint": "5.18.0",
     "tslint-config-prettier": "1.18.0",
     "tslint-plugin-prettier": "2.3.0",
