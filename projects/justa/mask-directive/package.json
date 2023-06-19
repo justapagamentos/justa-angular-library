@@ -40,7 +40,7 @@
     "inputmask": ">=4.0.0"
   },
   "devDependencies": {
-    "inputmask": "4.0.9"
+    "inputmask": "5.0.8"
   },
   "publishConfig": {
     "access": "public"
